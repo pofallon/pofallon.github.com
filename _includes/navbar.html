@@ -1,0 +1,30 @@
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="/">Paul O'Fallon</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              {% if page.menu == 'blog' %}
+                {% assign blogclass = 'class="active"' %}
+              {% elsif page.menu == 'projects' %}
+                {% assign projectsclass = 'class="active"' %}
+              {% elsif page.menu == 'courses' %}
+                {% assign coursesclass = 'class="active"' %}
+              {% elsif page.menu == 'about' %}
+                {% assign aboutclass = 'class="active"' %}
+              {% endif %}
+              
+              <li {{ blogclass }}><a href="/blog/">Blog</a></li>
+              <li {{ projectsclass }}><a href="/projects.html">Projects</a></li>
+              <li {{ coursesclass }}><a href="/courses.html">Courses</a></li>
+              <li {{ aboutclass }}><a href="/about.html">About</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
