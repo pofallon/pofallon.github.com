@@ -7,7 +7,7 @@ title: Home
 <html lang="en">
   <head>
   	<meta charset="utf-8">
-    <title>{{ page.title }}</title>
+    <title>{{ page.title }} - It's a Paul world!</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -20,6 +20,20 @@ title: Home
       body {
         padding-top: 60px;
         padding-bottom: 40px;
+      }
+      .hero-unit {
+        background-image: url(img/pic.png);
+        background-repeat: no-repeat;
+        padding-top: 50px;
+      }
+      .hero-unit h1 {
+        color: #ffffff;
+        text-align: right;
+      }
+      .hero-unit p {
+        color: #ffffff;
+        text-align: right;
+        margin-left: 250px;
       }
     </style>
 
@@ -43,7 +57,9 @@ title: Home
         <div class="span4">
           <h2>Blog</h2>
           <p>I prefer coding to writing.  However, I also believe it's important to share what you've learned.  Read my latest blog entry 
-            {% assign latest = site.posts | first %}
+            {% for post in site.posts limit:1 %}
+              {% assign latest = post %}
+            {% endfor %}
             <a href="{{ latest.url }}">"{{ latest.title }}"</a>
           </p>
           <p><a class="btn" href="/blog/">View blog &raquo;</a></p>
