@@ -7,7 +7,7 @@ title: Home
 <html lang="en">
   <head>
   	<meta charset="utf-8">
-    <title>{{ page.title }} - It's a Paul world!</title>
+    <title>{{ page.title }} - {{ site.name }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -49,7 +49,7 @@ title: Home
       <div class="hero-unit">
         <h1>{{ site.name }}</h1>
         <p>This is a template for a simple marketing or informational website. It includes a large callout called the hero unit and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
-        <p><a class="btn btn-primary btn-large">Learn more about me &raquo;</a></p>
+        <p><a class="btn btn-primary btn-large" href="about.html">Learn more about me &raquo;</a></p>
       </div>
 
       <!-- Example row of columns -->
@@ -79,7 +79,7 @@ title: Home
       <hr>
 
       <footer>
-        <p>&copy; Company 2012</p>
+        <p>&copy; {{ site.company }} 2012</p>
       </footer>
 
     </div> <!-- /container -->
