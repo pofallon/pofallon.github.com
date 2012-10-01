@@ -1,0 +1,15 @@
+body {
+  padding-top: 60px;
+  padding-bottom: 40px;
+}
+
+ul.posts
+{
+  list-style-type: none;
+  padding-left: 0px;
+}
+
+ul.posts li span { 
+  text-align: right;
+  width: 200px;
+}

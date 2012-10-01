@@ -1,33 +1,17 @@
 ---
 layout: default
 menu: blog
+title: Blog
 ---
 <div class="page-header">
   <h1>Blog <small>posts by date</small></h1>
 </div>
 <div class="row">
   <div class="span12">
-    <ul>
+    <ul class="posts">
     {% for post in site.posts %}
-    	<li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a>
-        {% if post.excerpt %}
-          <p>{{ post.excerpt }}</p>
-        {% endif %}
-      </li>
+    	<li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
     {% endfor %}
     </ul>
   </div>
-  <!-- <div class="span2">
-    <ul class="nav nav-pills nav-stacked">
-    {% for tag in site.tags %}
-      <li><a href="#">{{ tag | first }} - 
-      {% for posts in tag %}
-        {% unless forloop.first %}
-          {{ posts | size }}
-        {% endunless %}
-      {% endfor %}
-      </a></li>
-    {% endfor %}
-    </ul>
-  </div> -->
 </div>
