@@ -9,7 +9,29 @@ ul.posts
   padding-left: 0px;
 }
 
+ul.posts li {
+  line-height: 200%;
+}
+
 ul.posts li span { 
   text-align: right;
-  width: 200px;
+  display: inline-block;
+  width: 100px;
+}
+
+ul.projects
+{
+  list-style-type: none;
+  padding-left: 0px;
+}
+
+ul.projects li
+{
+  line-height: 200%;
+}
+
+ul.projects li span {
+  text-align: right;
+  display: inline-block;
+  width: 150px;
 }
