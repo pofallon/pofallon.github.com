@@ -35,3 +35,14 @@ ul.projects li span {
   display: inline-block;
   width: 150px;
 }
+
+div.courses img {
+  float: left;
+  margin-right: 1em;
+}
+
+div.courses span {
+  text-align: left;
+  display: inline-block;
+  width: 12em;
+}
